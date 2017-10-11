@@ -37,7 +37,7 @@ class MyPDO {
         return $result;
     }
 
-    public function nonQuery($sql,$data=[])
+    public function nonQuery($sql,$data=[]) //执行增删改的操作
     {
         $stmt=$this->pdo->prepare($sql);
         $stmt->execute($data);
